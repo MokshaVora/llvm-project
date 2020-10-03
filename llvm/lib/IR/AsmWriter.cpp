@@ -2690,6 +2690,12 @@ void AssemblyWriter::writeOperandBundles(const CallBase *Call) {
 
 void AssemblyWriter::printModule(const Module *M) {
   Machine.initializeIfNeeded();
+  
+  Out << "\n";
+  Out << "*****************************************************************\n"; 
+  Out << "*                  EXTRA: MOKSHA VORA 20111035                  *\n";
+  Out << "*****************************************************************\n";
+  Out << "\n";
 
   if (ShouldPreserveUseListOrder)
     UseListOrders = predictUseListOrder(M);
